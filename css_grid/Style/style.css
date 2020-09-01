@@ -1,0 +1,88 @@
+/* Grid Positioning
+
+Better manage the flow of elements as they appear
+Divide elements into Rows and Columns
+By default each div is considered a Row
+
+display: grid; 
+    Used to define the area is a grid
+grid-template-columns: 300px 300px; (2 Columns being 300px wide each)
+    Used to define the number of columns in a row with their widths
+grid-template-rows: 300px 300px; (2 Rows being 300px hight each)
+    Used to define the number of rows with their heights
+grid-column-start/end: #; (column position)
+grid-column: #/#; (start / end position)
+    Used to set where the column should start and end based on the number of columns in the row
+grid-row-start/end: #; (row position)
+grid-row: #/#; (start / end position)
+    Used to set where the row should start and end based on the number of rows in the grid
+    Need to adjust other elements due to some overlapping positioning as a result
+
+grid-template-areas
+    Used to represent the grid visually by referencing the grid-area names of each element
+    Build the look of the grid by using the name
+    Use the '.' to leave in empty space
+
+*/
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'box1 box2'
+    'box3 box3';
+  /*justify-items: center;
+  align-items: center;*/
+}
+
+.box1 {
+  border: 1px solid black;
+  background-color: lightblue;
+  grid-area: box1;
+
+  /*grid-row: 1/3;
+  grid-column: 1/2;*/
+}
+
+.box2 {
+  border: 1px solid black;
+  background-color: lightcoral;
+  grid-area: box2;
+
+  /*grid-row-start: 1;
+    grid-row-end: 3;
+  grid-row: 2/3;*/
+}
+
+.box3 {
+  border: 1px solid black;
+  background-color: lightgreen;
+  grid-area: box3;
+
+  /*grid-row: 3/4;
+  grid-column-start: 1;
+    grid-column-end: 3;
+  grid-column: 2/4;*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightslategray;
+}
+
+/* Image Gallery */
+.gallery {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+}

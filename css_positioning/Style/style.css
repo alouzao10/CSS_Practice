@@ -1,0 +1,84 @@
+/*  Static Positioning
+The default property for positioning elements
+Appear as they do within the browser window
+*/
+.staticPos {
+  position: static;
+}
+
+/* Relative Positioning
+Base elements to be positioned based on the parent element
+Gives access to the top, bottom, left, and right properties
+Position anywhere based on its original position
+The value of 0 marks its original position on screen, not the window
+Parent Element = Relative
+*/
+.relativePos {
+  position: relative;
+}
+
+/* Absolute Positioning
+Positions based on the location of the parent element, the body tag
+Can specify a parent element by making it relative to the child element of absolute
+Will then be positioned based on the parent element
+Child Element = Absolute
+*/
+.absolutePos {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Fixed Positioning
+Fixes a position relative to the viewport/browser window
+Will always appear in the same position on screen as you scroll up and down
+Good for button to return to top of the page
+*/
+.fixedPos {
+  position: fixed;
+  left: 50px;
+}
+
+/* Sticky Positioning
+Positions the element to a fixed location when no longer in the main view
+Works like Fixed but allows it to stay in its original position when in view
+
+*/
+.stickyPos {
+  position: sticky;
+}
+
+/* Box Styling */
+.box {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 5px solid black;
+  background-color: gray;
+  margin: 20px auto;
+}
+
+.item1 {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  position: fixed;
+  left: 50px;
+}
+
+.item2 {
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+}
+
+/* Nav Styling */
+nav {
+  background-color: lightseagreen;
+  color: yellow;
+  position: sticky;
+  top: 0;
+}
+
+p {
+  width: 45%;
+}
